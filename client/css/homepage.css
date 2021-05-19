@@ -1,0 +1,70 @@
+.content-flex-container {
+  display: flex;
+  height: 100%;
+  padding: 20px;
+  width: 100%;
+  justify-content: center;
+  background-color: DodgerBlue;
+}
+
+.search-flex-container {
+  display: flex;
+  padding: 20px;
+  height: 13%;
+  width: 100%;
+  justify-content: center;
+  background-color: DodgerBlue;
+}
+
+.inner-search-filter-flex-container {
+  background-color: DodgerBlue;
+  width: 25%;
+  margin: 18px;
+  padding: 5px;
+  font-size: 15px;
+}
+
+.inner-search-filter-flex-container > div  {
+  background-color: DodgerBlue;
+  margin: 2px;
+  padding: 2px;
+  font-size: 15px;
+}
+
+.inner-search-flex-container {
+  background-color: #f1f1f1;
+  width: 100%;
+  margin: 18px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.left-flex-container {
+  background-color: #f1f1f1;
+  width: 50%;
+  margin: 18px;
+  padding: 20px;
+  font-size: 30px;
+}
+
+.right-flex-container {
+  background-color: #f1f1f1;
+  width: 100%;
+  margin: 18px;
+  margin-left: 0px;
+  padding: 20px;
+  font-size: 30px;
+}
+
+#searchbar {
+   background-color: #f1f1f1;
+   width: 100%;
+   height: 100%;
+   font-family:"Times New Roman", Times, serif;  
+   font-size: 5vmin;
+   /* TODO more on fixing the font scaling: https://stackoverflow.com/questions/16056591/font-scaling-based-on-width-of-container */
+   resize: none;
+   border: none;   
+}
+

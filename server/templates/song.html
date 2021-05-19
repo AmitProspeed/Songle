@@ -1,0 +1,90 @@
+<head>
+  <title>Songle</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="../static/js/matches.js"></script> 
+  <link rel="stylesheet" href="../static/css/song.css?v=1.0.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <form action="/search" id="searchForm" method="GET">
+    <div id="top">
+      <a href="/">
+        <p id="logo">
+          <span style='color: #4285F4'>S</span>
+          <span style='color: #EA4335'>o</span>
+          <span style='color: #FBBC05'>n</span>
+          <span style='color: #4285F4'>g</span>
+          <span style='color: #34A853'>l</span>
+          <span style='color: #EA4335'>e</span>
+        </p>
+      </a>
+      
+      <div id="searchbarDiv">
+        <input type="text" id="searchbar" name="searchBar" placeholder="search..."/>
+      </div>
+    </div>
+  </form>
+
+<div class="container" id="lyricsContainer">
+  
+  <div class="row" id="lyrics">
+    <h1 id="artistTitle" style="padding-bottom: 20px;">
+      {{song.title}} by {{song.artist}}
+    </h1>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div id="albumNameCover">
+        <img id="album" src="{{ album_links['album cover url'] }}" class="center" style="width: 350px; height: 350px;">
+        <figcaption style="font-size: x-large">"{{album_links["name"]}}" Album Cover</figcaption>
+      </div>
+      <br>
+      <div id="albumWordCloud">
+        <img id="wordcloud" src="data:image/png;base64, {{wc['album wordcloud']}}" class="center" style="width: 580px; height: 350px;">
+        <figcaption style="font-size: x-large">"{{album_links["name"]}}" Album Wordcloud</figcaption>
+      </div>
+      <br>
+      <div id="songWordCloud">
+        <img id="wordcloud" src="data:image/png;base64, {{wc['song wordcloud']}}" class="center" style="width: 580px; height: 350px;">
+        <figcaption style="font-size: x-large">"{{song['title']}}" Song Wordcloud</figcaption>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <p style="font-family: Trebuchet; font-size: x-large;"> {{song.lyrics}} </p>
+      <h1 style="font-weight: bold; text-align: center;">Sentiment</h1>
+      {% if sa == 1 %}
+        <img id="sentiment" src="https://images-na.ssl-images-amazon.com/images/I/41-bCHxYsDL._AC_SX466_.jpg" class="center" style="width: 50px; height: 50px;">
+      {% elif sa == 0 %}
+        <img id="sentiment" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Neutral_Face_Emoji_large.png?v=1571606037" class="center" style="width: 50px; height: 50px;">
+      {% else %}
+        <img id="sentiment" src="https://cdn.shopify.com/s/files/1/1061/1924/products/Very_sad_emoji_icon_png_large.png?v=1571606089" class="center" style="width: 50px; height: 50px;">
+      {% endif %}
+    </div>
+    <div class="col-md-4">
+      <div class="row">
+        <div id="albumLink">
+          <h1 style="font-size: x-large; text-align: center;">"{{album_links["name"]}}" Album Spotify</h1>
+          <iframe class="col-md-offset-2 col-md-8 text-center" src="{{spotify_urls['album url']}}" width="300" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+          <!--figcaption style="font-size: x-large; text-align: center;">"{{album_links["name"]}}" spotify</figcaption-->
+        </div>
+      </div>
+      <div class="row">
+        <div id="artistLink">
+          <h1 style="font-size: x-large; text-align: center;">"{{song['artist']}}" Top Songs</h1>
+          <iframe class="col-md-offset-2 col-md-8 text-center" src="{{spotify_urls['artist url']}}" width="300" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+          <!--figcaption style="font-size: x-large; text-align: center;">"{{song['artist']}}" spotify</figcaption-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <p>{{album_links["spotify url"]}}</p> -->
+<div>
+
+ 
+</body>
+

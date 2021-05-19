@@ -1,0 +1,43 @@
+<head>
+  <title>Songle</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="../static/js/matches.js"></script> 
+  <link rel="stylesheet" href="../static/css/matches.css">
+</head>
+
+<body >
+
+  <form action="/search" id="searchForm" method="GET">
+    <div id="top">
+      <a href="/">
+        <p id="logo">
+          <span style='color: #4285F4'>S</span>
+          <span style='color: #EA4335'>o</span>
+          <span style='color: #FBBC05'>n</span>
+          <span style='color: #4285F4'>g</span>
+          <span style='color: #34A853'>l</span>
+          <span style='color: #EA4335'>e</span>
+        </p>
+      </a>  
+      
+      <div id="searchbarDiv">
+        <input type="text" id="searchbar" name="searchBar" placeholder="search..."/>
+      </div>
+    </div>
+  </form>
+
+  <div id="bottom">
+    {% for item in matches %}
+    <p><button class="displaySongs" style='color: #1906A7;' onclick="submitForm( '{{item._id}}' )">{{item.title}} by {{item.artist}}</button></p>
+    {% endfor %}
+      
+    <form action="/song" id="songSelect" method="GET">
+    <input id="songId" name="songId" type="hidden" value="">
+    </form>
+  </div>
+  
+
+</body>
+
+<!--display song name and artist name-->

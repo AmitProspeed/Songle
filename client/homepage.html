@@ -1,0 +1,37 @@
+<head>
+  <script src="js/homepage.js"></script> 
+  <link rel="stylesheet" href="css/homepage.css">
+</head>
+
+<body>
+
+<div class="search-flex-container">
+
+  <div class="inner-search-flex-container"> 
+    <textarea id="searchbar" placeholder="search..."></textarea> 
+    <!-- <input id="searchbar" onkeyup="search()" type="text" name="search" placeholder="search..."> -->
+  </div>
+
+
+  <div class="inner-search-filter-flex-container">
+    
+    <div>
+    <label> Filter by: </label> 
+    <select> 
+	    <option value="Artist">Artist</option>
+	    <option value="Album">Album</option>
+	    <option value="Song Title">Song Title</option>
+	    <option value="Lyrics">Lyrics</option>
+    </select>
+    </div>
+
+    <div><button onclick="makeSearch()">Make your search!</button></div>
+  </div>
+</div>
+
+<div class="content-flex-container">
+   <div class="left-flex-container">1</div>
+   <div class="right-flex-container">2</div>
+</div> 
+
+</body>

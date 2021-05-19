@@ -1,0 +1,92 @@
+#logo{
+    margin-top: 50px;
+    font-size: 30px;
+    /* width: 100%; */
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+a:link {
+    text-decoration: none;
+}
+  
+a:visited {
+    text-decoration: none;
+}
+  
+p span {
+    padding-left:0px; 
+    padding-right:0px;
+}
+
+#top{
+    height: 15%;
+    width: 100%;
+    min-width: 855px;
+    justify-content: space-between ;
+    display: inline-block;
+    min-height: 100px;
+}
+
+#searchbarDiv{
+    /* height: 85px; */
+    width: 80%;
+    /* min-width: 80%; */
+    display: inline-block;
+    resize:none;
+    /* margin: auto; */
+}
+
+#searchbar {
+    background-color: #f1f1f1;
+    border-radius: 15px;
+    width: 100%;
+    /* height: 100%; */
+    height: 75px;
+    padding: 20px;
+    font-family:"Times New Roman", Times, serif;
+    font-size: 35px;
+    /* TODO more on fixing the font scaling: https://stackoverflow.com/questions/16056591/font-scaling-based-on-width-of-container */
+    resize: none;
+    border: none;
+    margin-top: 20px;
+ }
+
+#bottom{
+    margin:auto;
+    margin-left:160px;
+    display:grid;
+    width: fit-content;  
+    height: 100%;
+    margin-top: 20px;  
+    min-width: 100%;
+}
+
+.displaySongs{
+    /* border-radius: 12px; */
+    border: transparent; 
+
+    background-color: transparent;
+    /* padding:10px; */
+    margin-bottom:10px;
+    font:"Times New Roman", Times, serif;
+    color: #1906A7;
+    font-size: 20px;
+
+}
+
+.displaySongs:hover{
+    /* background: #E6FBF6; */
+    text-decoration: underline;
+    color: #1906A7;
+}
+
+.search-flex-container {
+    display: flex;
+    margin: auto;
+    padding: 20px;
+  
+  }
+  
