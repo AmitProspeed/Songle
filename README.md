@@ -1,4 +1,5 @@
 # SONGLE
+A TF-IDF based song search engine with a corpus of over 22600 songs crawled from Spotify and Genius API. An inverted index is created and added upto 3 types of search queries - One word, free text and phrased queries. Integrated song analysis features like WordCloud, Spotify song links, and lyric sentiment analysis.
 
 Before running a file, do:
 
